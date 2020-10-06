@@ -22,7 +22,7 @@ class Analysis():
         if win == None : win = sig.windows.hann(win_size,sym = False) # bien assymétrique
         if overlap == None : overlap = int(Nfft/2)
         win_size = int(win_size)
-        Pw_win =  np.sum(win**2) # calcule de l'énergie de la fenêtre
+        Pw_win =  np.sum(win**2) # calcul de l'énergie de la fenêtre
         N = len(x)
         out = np.zeros(int(win_size))
         pas = win_size-overlap
