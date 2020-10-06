@@ -14,9 +14,9 @@ class Analysis():
         self.Sxx = None
         self.Sxy = None
         self.FRFlog = FRFlog
-        self.welch()
+        # self.welch()
         
-    def welch(self,win_size = int(2**12),win = None,overlap =None , Nfft= None):
+    def welch(self,win_size = int(2048),win = None,overlap =None , Nfft= None):
         x,y = self.x, self.y
         if Nfft== None : Nfft = win_size
         if win == None : win = sig.windows.hann(win_size,sym = False) # bien assymétrique

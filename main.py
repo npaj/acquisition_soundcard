@@ -33,6 +33,10 @@ data = data[N_source-N: , :]
 # savefile
 wav.write(f'{exp_name}.wav', Fs, np.int16(data*2**16))
 
+data_pross = Analysis(data[:,0], data[:,1], Fs)
+data_pross.welch(win_size = 2048,win = None,overlap =None , Nfft= None)
+
+print(data_pross)
 
 plt.figure()
 if channel_number == 1:
@@ -42,7 +46,3 @@ else:
 plt.plot(time, wgn, label = 'source')
 plt.legend()
 plt.show()
-
-data_pross = Analysis(data[:,0], data[:,1], Fs)
-
-print(data_pross)
