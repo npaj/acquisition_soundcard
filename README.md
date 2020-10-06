@@ -8,9 +8,10 @@
 
 install sounddevice : 
 Anaconda
-‘‘‘
+
+```
 conda install -c conda-forge python-sounddevice
-‘‘‘
+```
 
 
 ## Credits
